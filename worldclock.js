@@ -15,6 +15,7 @@ function startTime(office) {
         return this.getTimezoneOffset() < this.stdTimezoneOffset();
     }
     
+    //Calculate Offset based on Office
     var offset = 0;
     if (office == 0 || office == 1) {
         //SLC
@@ -32,6 +33,7 @@ function startTime(office) {
         //Taiwan
         offset = 8;
     }
+    
     var now = new Date();
     //Calculate Daylight Savings time in areas where that matters
     if (office < 3) {
